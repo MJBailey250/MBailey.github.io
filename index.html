@@ -1,21 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My GitHub Website</title>
+    <title>Michael Bailey's Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            background-image: url("background.jpg");
+            background-size: cover;
         }
-        h1 {
+
+        #header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #tabs {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        #tabs ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #tabs ul li {
+            margin-right: 10px;
+        }
+
+        #tabs ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            color: #333;
+            background-color: #ddd;
+        }
+
+        #tabs ul li a:hover {
+            background-color: #bbb;
+        }
+
+        #content {
+            padding: 20px;
             color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Website!</h1>
-    <p>This is a sample website hosted on GitHub.</p>
-    <p>Feel free to customize this template as per your requirements.</p>
+    <div id="header">
+        <h1>Michael Bailey's Website</h1>
+    </div>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <div id="about">
+            <h2>About</h2>
+            <p>Welcome to my website! I am Michael Bailey, a passionate web developer.</p>
+        </div>
+
+        <div id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of my notable projects:</p>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </div>
+
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to get in touch with me:</p>
+            <ul>
+                <li>Email: example@example.com</li>
+                <li>Phone: 123-456-7890</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
