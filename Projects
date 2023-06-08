@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
+        #header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #project-content {
+            padding: 20px;
+            color: #333;
+        }
+
+        #project-content h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+        }
+
+        #project-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        #project-content .media {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #project-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #project-content video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Project Page</h1>
+    </div>
+
+    <div id="project-content">
+        <h2>Project 1</h2>
+        <div class="media">
+            <img src="project1_image1.jpg" alt="Project 1 Image 1">
+        </div>
+        <div class="media">
+            <video controls>
+                <source src="project1_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p>This is a description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet nisl a nunc cursus eleifend. Integer eget ex vel tortor dignissim tempus non ac mi.</p>
+
+        <h2>Project 2</h2>
+        <div class="media">
+            <img src="project2_image1.jpg" alt="Project 2 Image 1">
+        </div>
+        <p>This is a description of Project 2. Duis rutrum euismod neque, ac feugiat mi pharetra vitae. In dapibus feugiat ligula sed tincidunt. Donec eget orci quis nulla interdum lacinia et non ex.</p>
+
+        <h2>Project 3</h2>
+        <div class="media">
+            <img src="project3_image1.jpg" alt="Project 3 Image 1">
+        </div>
+        <div class="media">
+            <video controls>
+                <source src="project3_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p>This is a description of Project 3. Proin eu neque pretium, luctus felis a, feugiat risus. Sed suscipit lacinia tortor, id sagittis urna consectetur sit amet. Morbi varius euismod est id tempor.</p>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2023 Michael Bailey's Website. All rights reserved.</p>
+    </
