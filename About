@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - Michael Bailey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #content {
+            padding: 20px;
+            color: #333;
+        }
+
+        #content h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+        }
+
+        #content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        #content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        #footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>About Me - Michael Bailey</h1>
+    </div>
+
+    <div id="content">
+        <h2>Introduction</h2>
+        <p>Hello! My name is Michael Bailey, and I am an engineer with a passion for design and building projects. With several years of experience in the field, I have had the opportunity to work on a wide range of exciting and challenging endeavors.</p>
+
+        <h2>Experience</h2>
+        <p>Throughout my career, I have been involved in various projects that have allowed me to showcase my skills and expertise. Some of my notable experiences include:</p>
+        <ul>
+            <li>Designing and constructing a sustainable housing complex</li>
+            <li>Leading a team in the development of a cutting-edge renewable energy system</li>
+            <li>Collaborating with architects and contractors to ensure seamless integration of design and construction</li>
+            <li>Managing large-scale engineering projects from conception to completion</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <p>I possess a diverse set of skills that enable me to excel in my field. Some of my key skills include:</p>
+        <ul>
+            <li>Proficiency in CAD software for design and modeling</li>
+            <li>Strong analytical and problem-solving abilities</li>
+            <li>Excellent project management and organizational skills</li>
+            <li>Effective communication and teamwork</li>
+            <li>In-depth knowledge of engineering principles and industry best practices</li>
+        </ul>
+
+        <h2>Passion for Innovation</h2>
+        <p>I am driven by a passion for innovation and constantly seek opportunities to push the boundaries of what is possible. I thrive on finding creative solutions to complex challenges and love seeing my ideas come to life through successful project implementation.</p>
+
+        <h2>Contact</h2>
+        <p>If you would like to get in touch or discuss potential collaboration opportunities, please feel free to contact me via email at [email protected] or reach out to me on LinkedIn.</p>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2023 Michael Bailey's Website. All rights reserved.</p>
+    </div>
+</body>
+</html>
