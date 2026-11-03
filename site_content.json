@@ -30,7 +30,8 @@
       "details": [
         "What you built and the problem it solves.",
         "Tools, decisions, or lessons worth sharing."
-      ]
+      ],
+      "slug": "project-title"
     }
   ],
   "other_work": [
