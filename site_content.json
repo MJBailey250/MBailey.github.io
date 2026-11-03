@@ -1,5 +1,5 @@
 {
-  "name": "Michael Bailey",
+  "name": "Michael J Bailey",
   "short_name": "MB",
   "role": "Developer",
   "tagline": "Thoughtful ideas. Useful things.",
@@ -30,8 +30,7 @@
       "details": [
         "What you built and the problem it solves.",
         "Tools, decisions, or lessons worth sharing."
-      ],
-      "slug": "project-title"
+      ]
     }
   ],
   "other_work": [
