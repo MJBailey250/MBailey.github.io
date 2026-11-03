@@ -1,116 +1,205 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Michael Bailey's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background: url("background.jpg") no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        #header {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-        }
-
-        #header h1 {
-            margin: 0;
-            color: #333;
-        }
-
-        #nav {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            text-align: center;
-        }
-
-        #nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        #nav ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        #nav ul li a {
-            text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-        }
-
-        #content {
-            padding: 20px;
-            color: #fff;
-            text-align: center;
-        }
-
-        #content h2 {
-            margin: 0 0 20px;
-            font-size: 36px;
-        }
-
-        #content p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        #footer {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-        }
-
-        #footer p {
-            margin: 0;
-            color: #333;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101513">
+  <meta name="description" content="The portfolio and projects of Michael Bailey.">
+  <title>Michael Bailey — Developer &amp; Maker</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3f2ec;
+      --muted: #a9b0a8;
+      --bg: #101513;
+      --panel: #171e1a;
+      --line: rgba(238, 242, 231, .14);
+      --lime: #c7f36b;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(16, 21, 19, .82);
+      backdrop-filter: blur(18px);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 15px; font-weight: 750; letter-spacing: -.03em; text-decoration: none; }
+    .brand-mark { color: var(--lime); }
+    .navlinks { display: flex; align-items: center; gap: 30px; }
+    .navlinks a { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; transition: color .2s; }
+    .navlinks a:hover, .navlinks a:focus-visible { color: var(--ink); }
+    .navlinks .nav-cta { border: 1px solid var(--line); border-radius: 999px; color: var(--ink); padding: 10px 16px; }
+    .hero { min-height: 590px; display: grid; align-items: center; padding: 90px 0 100px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; width: 560px; height: 560px; border-radius: 50%;
+      right: -120px; top: 2%; pointer-events: none;
+      background: radial-gradient(circle, rgba(151, 205, 83, .17), rgba(151, 205, 83, .05) 38%, transparent 69%);
+      filter: blur(8px);
+    }
+    .hero-inner { position: relative; max-width: 790px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--lime); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 750; }
+    .eyebrow::before { content: ""; width: 25px; height: 1px; background: currentColor; }
+    h1 { max-width: 800px; margin: 23px 0 20px; font-size: clamp(54px, 8.6vw, 104px); line-height: .96; letter-spacing: -.075em; font-weight: 650; }
+    h1 span { color: var(--lime); }
+    .intro { max-width: 550px; margin: 0; color: var(--muted); font-size: clamp(16px, 2vw, 19px); line-height: 1.75; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 19px; border-radius: 999px; text-decoration: none; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--lime); color: #17200f; }
+    .button-secondary { border: 1px solid var(--line); color: var(--ink); }
+    .arrow { font-size: 17px; line-height: 0; }
+    .hero-note { position: absolute; right: 0; bottom: 34px; color: #788178; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    .section { padding: 86px 0; border-top: 1px solid var(--line); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
+    .section-kicker { margin: 0 0 12px; color: var(--lime); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 750; }
+    h2 { margin: 0; font-size: clamp(32px, 5vw, 52px); line-height: 1.05; letter-spacing: -.055em; font-weight: 620; }
+    .section-lead { max-width: 430px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { min-height: 245px; display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); text-decoration: none; transition: border-color .2s, transform .2s, background .2s; }
+    a.card:hover { border-color: rgba(199,243,107,.48); transform: translateY(-3px); background: linear-gradient(145deg, rgba(199,243,107,.08), rgba(255,255,255,.015)); }
+    .card-top { display: flex; justify-content: space-between; align-items: center; color: #869087; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    .card-icon { color: var(--lime); font-size: 20px; }
+    .card h3 { margin: auto 0 9px; font-size: 21px; letter-spacing: -.035em; }
+    .card p { max-width: 280px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .about-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+    .about-copy { max-width: 610px; color: var(--muted); font-size: 16px; line-height: 1.85; }
+    .about-copy p { margin: 0 0 18px; }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .tag { padding: 9px 12px; border: 1px solid var(--line); border-radius: 999px; color: #d5d9d1; font-size: 11px; }
+    .work-row { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; padding: 23px 0; border-top: 1px solid var(--line); }
+    .work-row:last-child { border-bottom: 1px solid var(--line); }
+    .work-row h3 { margin: 0 0 5px; font-size: 17px; }
+    .work-row p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .work-year { color: #879087; font-size: 12px; }
+    .contact { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 36px; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 90% 0%, rgba(199,243,107,.1), transparent 45%), var(--panel); }
+    .contact h2 { font-size: clamp(28px, 4vw, 42px); }
+    .contact p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+    footer { padding: 26px 0 34px; border-top: 1px solid var(--line); color: #7f8980; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    :focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, var(--max)); }
+      .nav { min-height: 66px; }
+      .navlinks { gap: 16px; }
+      .navlinks a { font-size: 12px; }
+      .navlinks .nav-cta { padding: 8px 12px; }
+      .hero { min-height: 560px; padding: 80px 0; }
+      .hero::before { right: -290px; top: 12%; }
+      .hero-note { display: none; }
+      .section { padding: 68px 0; }
+      .section-head { align-items: start; flex-direction: column; }
+      .project-grid { grid-template-columns: 1fr; }
+      .card { min-height: 195px; }
+      .about-layout { grid-template-columns: 1fr; gap: 24px; }
+      .contact { align-items: start; flex-direction: column; padding: 27px; }
+    }
+    @media (max-width: 460px) {
+      .navlinks { gap: 12px; }
+      .navlinks a:nth-child(2) { display: none; }
+      .brand { font-size: 14px; }
+      .hero { min-height: 520px; }
+      .footer-inner { flex-direction: column; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-    <div id="header">
-        <h1>Welcome to Michael Bailey's Website!</h1>
-    </div>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">MB<span class="brand-mark">.</span></a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-    <div id="nav">
-        <ul>
-            <li><a href="https://mjbailey250.github.io/MBailey.github.io/projects.html">Projects</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#work">Other Work</a></li>
-        </ul>
-    </div>
+  <main id="home">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="eyebrow">Michael Bailey · Developer</div>
+        <h1 id="hero-title">Thoughtful ideas.<br><span>Useful things.</span></h1>
+        <p class="intro">I’m Michael, a web developer who enjoys turning good ideas into clear, useful digital experiences. Take a look around.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#projects">Explore my projects <span class="arrow" aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="#about">A little about me</a>
+        </div>
+      </div>
+      <div class="hero-note">Personal portfolio · Est. 2023</div>
+    </section>
 
-    <div id="content">
-        <h2>Projects</h2>
-        <p>Here are some of my notable projects:</p>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-kicker">Selected work</p><h2 id="projects-title">Things I’ve made.</h2></div>
+          <p class="section-lead">A few projects and experiments I’m proud of. Open a project to explore the details.</p>
+        </div>
+        <div class="project-grid">
+          <a class="card" href="https://mjbailey250.github.io/MBailey.github.io/projects.html">
+            <div class="card-top"><span>Featured project</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <h3>Projects</h3><p>Browse my projects, ideas, and experiments.</p>
+          </a>
+          <div class="card">
+            <div class="card-top"><span>Web development</span><span class="card-icon" aria-hidden="true">✳</span></div>
+            <h3>More coming soon</h3><p>I’m adding more work here. Check back to see what I’ve been building.</p>
+          </div>
+          <div class="card">
+            <div class="card-top"><span>Explorations</span><span class="card-icon" aria-hidden="true">◎</span></div>
+            <h3>Ideas in progress</h3><p>Small experiments, new techniques, and things I’m curious about.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h2>About Me</h2>
-        <p>I am Michael Bailey, a passionate web developer.</p>
-        <p>I have experience in front-end and back-end development, and I enjoy creating interactive and user-friendly websites.</p>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about-layout">
+        <div><p class="section-kicker">A bit about me</p><h2 id="about-title">Curious by nature.<br>Builder by habit.</h2></div>
+        <div class="about-copy">
+          <p>I’m Michael Bailey. I enjoy making websites and digital tools that feel simple to use and rewarding to explore.</p>
+          <p>I’m interested in the whole process: shaping an idea, working through the details, and bringing it to life on screen. This site is where I share the things I make and the things I’m learning.</p>
+          <div class="about-tags" aria-label="Areas of interest"><span class="tag">Web development</span><span class="tag">Creative problem-solving</span><span class="tag">Learning by making</span></div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Other Work</h2>
-        <p>Here are some other examples of my work:</p>
-        <ul>
-            <li>Work 1</li>
-            <li>Work 2</li>
-            <li>Work 3</li>
-        </ul>
-    </div>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-kicker">Beyond the portfolio</p><h2 id="work-title">Other work.</h2></div>
+          <p class="section-lead">A home for the useful, interesting, or slightly unusual things I work on.</p>
+        </div>
+        <div class="work-row"><div><h3>Experiments &amp; side projects</h3><p>Small builds and ideas that start with “I wonder if…”</p></div><span class="work-year">Ongoing</span></div>
+        <div class="work-row"><div><h3>Learning in public</h3><p>New tools, techniques, and lessons picked up along the way.</p></div><span class="work-year">Ongoing</span></div>
+      </div>
+    </section>
 
-    <div id="footer">
-        <p>&copy; 2023 Michael Bailey's Website. All rights reserved.</p>
-    </div>
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div><p class="section-kicker">Have something in mind?</p><h2>Let’s make it happen.</h2><p>Have a question or want to talk about a project? I’d be glad to hear from you.</p></div>
+          <a class="button button-primary" href="mailto:hello@example.com">Say hello <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Michael Bailey</span><span>Made with curiosity.</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
