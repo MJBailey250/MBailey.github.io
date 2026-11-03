@@ -3,38 +3,49 @@
   "short_name": "MB",
   "role": "Developer",
   "tagline": "Thoughtful ideas. Useful things.",
-  "intro": "I’m Michael, a web developer who enjoys turning good ideas into clear, useful digital experiences.",
+  "intro": "Write a short introduction about what you make and what interests you.",
   "about": [
-    "I’m Michael Bailey. I enjoy making websites and digital tools that feel simple to use and rewarding to explore.",
-    "I’m interested in the whole process: shaping an idea, working through the details, and bringing it to life on screen."
+    "Write a paragraph about yourself.",
+    "Add what you enjoy building, learning, or exploring."
   ],
   "interests": [
     "Web development",
     "Creative problem-solving",
     "Learning by making"
   ],
-  "email": "hello@example.com",
-  "social": [],
+  "email": "your-real-email@example.com",
+  "social": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-user"
+    }
+  ],
   "projects": [
     {
-      "title": "Projects",
-      "category": "Featured project",
-      "description": "Browse my projects, ideas, and experiments.",
-      "url": "https://mjbailey250.github.io/MBailey.github.io/projects.html",
-      "year": "Featured",
+      "title": "Project title",
+      "category": "Web development",
+      "description": "What it does and why it matters.",
+      "url": "https://example.com",
+      "year": "2026",
       "details": [
-        "Project details coming soon."
-      ],
-      "slug": "projects"
+        "What you built and the problem it solves.",
+        "Tools, decisions, or lessons worth sharing."
+      ]
     }
   ],
   "other_work": [
     {
       "title": "Experiments & side projects",
-      "description": "Small builds and ideas that start with ‘I wonder if…’",
+      "description": "Small builds and ideas I am exploring.",
       "year": "Ongoing"
     }
   ],
-  "notes": [],
-  "contact_copy": "Have a question or want to talk about a project? I’d be glad to hear from you."
+  "notes": [
+    {
+      "title": "A note title",
+      "date": "2026",
+      "summary": "A short preview of your note."
+    }
+  ],
+  "contact_copy": "Have a question or want to talk about a project? I would be glad to hear from you."
 }
