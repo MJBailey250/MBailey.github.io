@@ -1,0 +1,40 @@
+{
+  "name": "Michael Bailey",
+  "short_name": "MB",
+  "role": "Developer",
+  "tagline": "Thoughtful ideas. Useful things.",
+  "intro": "I’m Michael, a web developer who enjoys turning good ideas into clear, useful digital experiences.",
+  "about": [
+    "I’m Michael Bailey. I enjoy making websites and digital tools that feel simple to use and rewarding to explore.",
+    "I’m interested in the whole process: shaping an idea, working through the details, and bringing it to life on screen."
+  ],
+  "interests": [
+    "Web development",
+    "Creative problem-solving",
+    "Learning by making"
+  ],
+  "email": "hello@example.com",
+  "social": [],
+  "projects": [
+    {
+      "title": "Projects",
+      "category": "Featured project",
+      "description": "Browse my projects, ideas, and experiments.",
+      "url": "https://mjbailey250.github.io/MBailey.github.io/projects.html",
+      "year": "Featured",
+      "details": [
+        "Project details coming soon."
+      ],
+      "slug": "projects"
+    }
+  ],
+  "other_work": [
+    {
+      "title": "Experiments & side projects",
+      "description": "Small builds and ideas that start with ‘I wonder if…’",
+      "year": "Ongoing"
+    }
+  ],
+  "notes": [],
+  "contact_copy": "Have a question or want to talk about a project? I’d be glad to hear from you."
+}
